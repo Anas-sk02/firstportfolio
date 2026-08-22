@@ -1,0 +1,71 @@
+/* ============================================
+   REUSABLE COMPONENTS
+   Nav, Buttons, Cards, Tags, Section Headers
+   ============================================ */
+
+/* Navigation */
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:200;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.85rem 2rem;gap:1rem}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:var(--navy);letter-spacing:-.01em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;list-style:none;gap:.15rem}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.38rem .85rem;border-radius:8px;transition:all .2s}
+.nav-links a:hover,.nav-links a.active{background:var(--navy);color:var(--surface)}
+.nav-right{display:flex;align-items:center;gap:.6rem}
+
+/* Theme Toggle */
+.theme-btn{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--navy);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .22s;flex-shrink:0}
+.theme-btn:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.theme-btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2}
+.theme-btn .moon{display:none}
+html[data-theme="dark"] .theme-btn .sun{display:none}
+html[data-theme="dark"] .theme-btn .moon{display:block}
+
+/* Hamburger (mobile) */
+.menu-btn{display:none;width:38px;height:38px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--navy);align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:all .22s}
+.menu-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.menu-btn .icon-close{display:none}
+.menu-btn.open .icon-bars{display:none}
+.menu-btn.open .icon-close{display:block}
+
+/* Buttons */
+.btn{padding:.72rem 1.65rem;border-radius:10px;font-weight:600;font-size:.88rem;text-decoration:none;transition:all .22s;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;border:none}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2;flex-shrink:0}
+.btn-primary{background:var(--navy);color:var(--surface);box-shadow:0 4px 16px var(--shadow2)}
+.btn-primary:hover{background:var(--navy2);transform:translateY(-2px);box-shadow:0 8px 24px var(--shadow2)}
+.btn-gold{background:linear-gradient(120deg,var(--gold),var(--gold2));color:#1a1508;box-shadow:0 4px 16px rgba(178,138,43,.32)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(178,138,43,.42)}
+.btn-sec{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-sec:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;transition:all .28s}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 48px var(--shadow2);border-color:rgba(178,138,43,.35)}
+
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;gap:.38rem}
+.tag,.tag.em,.tag.nv{font-family:'JetBrains Mono',monospace;font-size:.67rem;padding:.22rem .65rem;border-radius:7px;background:var(--bg);border:1px solid var(--border);color:var(--muted);transition:all .18s}
+.tag:hover,.tag.em:hover,.tag.nv:hover{background:var(--navy);color:var(--surface);border-color:var(--navy)}
+
+/* Section Headers */
+section{padding:6rem 8%;position:relative}
+section:nth-child(even){background:var(--bg2)}
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--gold);text-transform:uppercase;letter-spacing:.18em;margin-bottom:.55rem;font-weight:500}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,3.5vw,2.5rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:.6rem;line-height:1.15}
+.sec-title em{font-style:normal;color:var(--gold)}
+.sec-line{width:48px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));border-radius:3px;margin-bottom:3rem}
+
+/* Social Links */
+.soc-row{display:flex;gap:.6rem;margin-top:2.2rem;animation:up .7s .37s ease both;flex-wrap:wrap}
+.soc{display:flex;align-items:center;gap:.45rem;padding:.48rem 1rem;border-radius:9px;background:var(--surface);border:1.5px solid var(--border);text-decoration:none;color:var(--muted);transition:all .22s;font-size:.78rem;font-weight:500}
+.soc svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
+.soc:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px var(--shadow)}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* Footer */
+footer{border-top:1px solid var(--border);padding:1.6rem 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background:var(--surface)}
+footer p{font-size:.8rem;color:var(--dim)}
+.fa{color:var(--navy);font-weight:600;font-family:'Syne',sans-serif}
